@@ -11,7 +11,7 @@ export const asyncStorageService = {
       const jsonValue = JSON.stringify(data);
       await AsyncStorage.setItem(STORAGE_KEY, jsonValue);
     } catch (error) {
-      throw new Error('Erro ao salvar os dados:', error);
+      throw new Error('Erro ao salvar os dados:');
     }
   },
 
@@ -25,7 +25,7 @@ export const asyncStorageService = {
       const jsonValue = await AsyncStorage.getItem(STORAGE_KEY);
       return jsonValue ? JSON.parse(jsonValue) : null;
     } catch (error) {
-      throw new Error('Erro ao recuperar os dados:', error);
+      throw new Error('Erro ao recuperar os dados:');
     }
   },
 
@@ -36,7 +36,7 @@ export const asyncStorageService = {
     try {
       await AsyncStorage.removeItem(STORAGE_KEY);
     } catch (error) {
-      throw new Error('Erro ao remover os dados:', error);
+      throw new Error('Erro ao remover os dados:');
     }
   },
 
@@ -46,11 +46,11 @@ export const asyncStorageService = {
    */
   async addItem(newItem) {
     try {
-      const existingData = await AsyncStorageService.getData();
+      const existingData = await asyncStorageService.getData();
       const updatedData = existingData ? [...existingData, newItem] : [newItem];
-      await AsyncStorageService.saveData(updatedData);
+      await asyncStorageService.saveData(updatedData);
     } catch (error) {
-      throw new Error('Erro ao adicionar item:', error);
+      throw new Error('Erro ao adicionar item:');
     }
   }
 };

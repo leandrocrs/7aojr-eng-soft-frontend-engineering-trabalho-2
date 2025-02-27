@@ -1,4 +1,4 @@
-import { SafeAreaView, View, StyleSheet, ScrollView, KeyboardAvoidingView, Platform } from 'react-native';
+import { KeyboardAvoidingView, Platform, SafeAreaView, StyleSheet, View } from 'react-native';
 import { Logo } from "../atoms/Logo";
 
 export function LayoutDefault({ children, LayoutLogo = Logo }) {
@@ -6,10 +6,10 @@ export function LayoutDefault({ children, LayoutLogo = Logo }) {
     <SafeAreaView style={styles.container}>
       <KeyboardAvoidingView
         behavior={Platform.OS === "ios" ? "padding" : "height"}
-        style={{ flex: 1 }}
+        style={{ flex: 1, alignItems: 'stretch', justifyContent: 'center' }}
       >
-        <LayoutLogo />
         <View style={styles.content}>
+          <LayoutLogo />
           {children}
         </View>
       </KeyboardAvoidingView>
