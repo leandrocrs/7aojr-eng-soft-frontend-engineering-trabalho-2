@@ -21,6 +21,7 @@ jobs:
           node-version: 22
 
       - name: Instalar dependências
+        working-directory: api
         run: npm ci
 
       - name: Deploy para Render
