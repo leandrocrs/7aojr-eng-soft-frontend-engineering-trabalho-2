@@ -1,0 +1,8 @@
+{
+    "compilerOptions": {
+        "allowJs": true,
+        "checkJs": true,
+        "baseUrl": ".",
+        "jsx": "react-native"
+    }
+}
