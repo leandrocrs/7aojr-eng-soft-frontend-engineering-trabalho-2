@@ -1,0 +1,14 @@
+node_modules
+.DS_Store
+dist
+.env
+coverage
+ios
+android
+*.log
+*.lock
+*.idea
+*.vscode
+*.xcworkspace
+*.xcodeproj
+*.iml
