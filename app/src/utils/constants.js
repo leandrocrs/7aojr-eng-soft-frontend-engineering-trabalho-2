@@ -9,5 +9,5 @@ export const routeMap = {
 
 export const STORAGE_KEY = 'aliceWordsData';
 
-export const API_URL = process.env.API_URL;
+export const API_URL = process.env.EXPO_PUBLIC_API_URL;
 export const RANDOM_WORDS_API_PATH = "api/words";
